@@ -1,0 +1,93 @@
+/* 
+
+- Zen-theme by lokicalmito
+
+-- Theme overrides
+MessageBox: #242424
+Primary-Header: #242424
+
+*/
+
+:root {
+  /* Custom theme variables*/
+  --transition: 0.2s;
+
+  /* Revolt variables */
+  --emoji-size: 4em;
+}
+
+* {
+  scrollbar-width: inherit;
+}
+
+[class^="SidebarBase"]>[class^="Base"] {
+  background-color: var(--secondary-background) !important;
+}
+
+[class^="SidebarBase"]>[class^="Base"]>[class^="list"] {
+  opacity: 0;
+  transition: var(--transition);
+}
+
+[class^="SidebarBase"]>[class^="Base"]>[class^="list"]:hover {
+  opacity: 1;
+}
+
+[class^="ServerSidebar__ServerList"] {
+  opacity: 0;
+  transition: var(--transition);
+}
+
+[class^="ServerSidebar__ServerBase"]:hover [class^="ServerSidebar__ServerList"] {
+  opacity: 1;
+}
+
+[class^="ServerHeader__ServerBanner"] {
+  min-height: 120px !important;
+  background-image: none !important;
+  background-color: var(--secondary-background) !important;
+}
+
+[class^="Header"] {
+  padding: 1rem 16px !important;
+}
+
+[class^="Header__IconContainer"],
+[class^="ChannelHeader__Info"]>[class^="desc"],
+[class^="ChannelHeader__Info"]>[class^="divider"],
+[class^="HeaderActions__Container"] {
+  opacity: 0;
+  transition: var(--transition);
+}
+
+[class^="Header"]:hover [class^="Header__IconContainer"],
+[class^="Header"]:hover [class^="ChannelHeader__Info"]>[class^="desc"],
+[class^="Header"]:hover [class^="ChannelHeader__Info"]>[class^="divider"],
+[class^="Header"]:hover [class^="HeaderActions__Container"] {
+  opacity: 1;
+}
+
+[class^="MessageArea__Area"] {
+  padding: 0 2rem;
+}
+
+[class^="MessageBase__MessageInfo"]>[class^="IconBase"],
+[class^="UserShort__Name"] {
+  opacity: 0.8;
+}
+
+[class^="MessageBase"] {
+  border-radius: 8px;
+  padding: 0.165rem 0.125rem 0.165rem 0.125rem;
+}
+
+[class*="MessageBox__Action"],
+[class^="MessageBox__FileAction"] {
+  opacity: 0.3;
+  transition: var(--transition);
+}
+
+[class*="MessageBox__Action"]:hover,
+[class^="MessageBox__FileAction"]:hover {
+  opacity: 1;
+}
